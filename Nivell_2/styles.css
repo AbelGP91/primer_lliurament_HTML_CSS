@@ -1,107 +1,185 @@
 *{
-    margin: 10px;
+
+    margin: 10px 0px;
     padding: 10px;
     box-sizing: border-box; /*Añade margin y padding al tamaño de los elementos*/
     max-width: 1200px; /*Amplada màxima de la maquetació */
 }
 
 body{
+
    font-family: 'Montserrat', sans-serif;  
    /*  font-family: 'Lora', serif; */
 }
 
+a{
+
+    text-decoration: none;
+}
+
 .padre{
+    
     display: flex;
     flex-flow: column nowrap;
 }
 
 .header{
-    background: #000;
-    /*display: flex;
-    flex-flow: column nowrap;*/
+
+    background: url(images/header.jpg);
+    background-position: center;
+    background-attachment: contain;
+    background-size: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 420px;
+
 }
+
     .menu{
-        background: #2d4059;
+               
         display: flex;
-        /*flex-flow: row nowrap;*/
-        /*height: 75px;*/
+        flex-flow: row nowrap;
+        margin-top: 20px;
+        height: 50px;
         align-items: center;
     }
-        .logo{
-            background: #ea5455;
+
+        .logo{   
+                        
             flex: 1 1 auto;
-            height: 30px;
+                  
+        }  
+        
+        .logo img{
+
+            height: 100px;
         }
-        .nav{
-            background: #ea5455;
+
+        .nav{    
+
             flex: 5 1 auto;
-            height: 30px;
+            display: flex;  
+            margin-left: 40px;
+                  
         }
-        .social{
-            background: #ea5455;
+
+            .nav a{
+
+                color: #676363;
+                font-size: 11px;
+                text-transform: uppercase;
+                padding: 0 10px;
+                letter-spacing: 2px;
+                margin: 0px 15px;
+            }
+
+            .nav a:hover{
+
+                color: #040404;
+            }
+
+        .social{  
+
             flex: 1 1 auto;
-            height: 30px;       
+            display: flex;                   
         }
+
+            .social a{
+
+                font-size: 15px;
+                color: #676363;
+                padding: 0 0px;
+            }
+
+            .social a:hover{
+
+                color: #343434;
+            }
+
     .texto-principal{
-        background: #f07b3f;
-        margin-top: 20px;   /*Em genera TOC que la separació sigui inferior als marges del header*/
+               
+        
+        text-align: center;
+        height: 200px;
+        background: rgba(0, 0, 0,.1);
+        margin: 190px 50px 0px 50px;
+        padding-bottom: 58px;
+        
     }
+
         h1{
-            background: #ffd460;
+
+            color: rgba(223, 137, 39, 0.7);            
+            font-size: 25px;
         }
 
 .section{
+    
     background: #000;
     display: flex;
 }
     .articulos{
+
         background: #4e4e6a;
         flex: 2.5 1 auto;
         display: flex;
         flex-flow: row wrap;
     }
         .article{
+
             background: #1f6cb0;
             flex: 1 1 40%;
         }
+
         .navegacion{
+
             background: #70a3c4;
             flex: 1 1 100%;
         }
     
     .aside{
+
         background: #f73f52;
         flex: 1 1 auto;
     }
+
         .publicidad{
+
             background: #ffea85;
         }
 
 .footer{
+
     background:#000;
     display: flex;
     /*justify-content: center;*/
 }
+
     .pie{
+
         background: #e6af2e;
         /*width: 300px;*/
-        flex: 1 1 100%;
-    
+        flex: 1 1 100%;    
     }
  
     
 @media all and (max-width: 850px){
+
     .section{
+
         flex-direction: column;
         background: yellow; 
     }
+
     /*
     .menu{
         flex-direction: column;
         height: auto;
     }
     */
+
     .aside{
+
         /*display: flex;*/
         justify-content: center;
     }
@@ -111,19 +189,29 @@ body{
 /* @media all and (max-width: 600px){} */
 
 @media all and (max-width: 450px){
+
     .articulos{
+
         flex-direction: column;
     }
+
     .menu{
+
         flex-direction: column;             
     }
+
         .logo{
+
             width: 80%;
         }
+
         .nav{
+
             width: 80%;
         }
+
         .social{
+
             width: 80%;
         }
         
